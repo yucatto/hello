@@ -9,6 +9,11 @@ class Kazuate {
         for(int i = 0; i < 5; i++) {
             int inputNum = sc.nextInt();
 
+            //2桁の正の整数以外の時はやり直し
+            if(inputNum < 10 || 99 < inputNum) {
+                continue;
+            }
+
             //当たれば当たり表示を出して終了
             if(inputNum == _kazuateNum) {
                 System.out.println("当たり");
